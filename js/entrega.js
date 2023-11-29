@@ -34,11 +34,9 @@ while (!accesoPermitido) {
     }
 }
 
-// Elección de comida
 let opcionesComida = ["Ensalada cesar", "Pizza", "Pastas"];
 let comida = prompt("Elige tu comida favorita entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
 
-// Validar elección de comida
 while (true) {
     switch (comida) {
         case "1":
@@ -56,12 +54,9 @@ while (true) {
     }
     break;
 }
-
-// Elección de día
 let diasSemana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
 let diaSemana = prompt("¿En qué día de la semana te gustaría comer " + comida + "? \n1. Lunes\n2. Martes\n3. Miércoles \n4. Jueves \n5. Viernes\n6. Sábado \n7. Domingo");
 
-// Validar elección de día
 while (true) {
     switch (diaSemana) {
         case "1":
@@ -91,8 +86,6 @@ while (true) {
     }
     break;
 }
-
-// Ciclo comida
 switch (comida.toLowerCase()) {
     case "pizza":
         console.log("¡Buena elección! A disfrutar de la pizza.");
@@ -107,7 +100,6 @@ switch (comida.toLowerCase()) {
         console.log("Algo salió mal con la elección de comida.");
 }
 
-// Ciclo día
 switch (diaSemana.toLowerCase()) {
     case "lunes":
         console.log("Comenzando la semana con " + comida + ".");
