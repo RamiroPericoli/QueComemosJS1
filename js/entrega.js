@@ -36,19 +36,19 @@ while (!accesoPermitido) {
 
 // Elección de comida
 let opcionesComida = ["Ensalada cesar", "Pizza", "Pastas"];
-let comida = prompt("Elige tu comida favorita entre: \n1. Ensalada cesar \n2. Pizza \n3. Pastas");
+let comida = prompt("Elige tu comida favorita entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
 
 // Validar
-while (!opcionesComida.map(opcion => opcion.toLowerCase()).includes(comida.toLowerCase())) {
-    comida = prompt("Opción no válida. Por favor, elige entre: \n1. Ensalada cesar \n2. Pizza \n3. Pastas");
+while (!opcionesComida.includes(comida.toLowerCase())) {
+    comida = prompt("Opción no válida. Por favor, elige entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
 }
 
 // Elección de día
-let diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+let diasSemana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
 let diaSemana = prompt("¿En qué día de la semana te gustaría comer " + comida + "? (De lunes a domingo)");
 
 // Validar
-while (!diasSemana.map(dia => dia.toLowerCase()).includes(diaSemana.toLowerCase())) {
+while (!diasSemana.includes(diaSemana.toLowerCase())) {
     diaSemana = prompt("Día no válido. Por favor, elige un día de la semana (de lunes a domingo)");
 }
 
