@@ -38,18 +38,58 @@ while (!accesoPermitido) {
 let opcionesComida = ["Ensalada cesar", "Pizza", "Pastas"];
 let comida = prompt("Elige tu comida favorita entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
 
-// Validar
-while (!opcionesComida.includes(comida.toLowerCase())) {
-    comida = prompt("Opción no válida. Por favor, elige entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
+// Validar elección de comida
+while (true) {
+    switch (comida) {
+        case "1":
+            comida = "Ensalada cesar";
+            break;
+        case "2":
+            comida = "Pizza";
+            break;
+        case "3":
+            comida = "Pastas";
+            break;
+        default:
+            comida = prompt("Opción no válida. Por favor, elige entre:\n1. Ensalada cesar\n2. Pizza\n3. Pastas");
+            continue;
+    }
+    break;
 }
 
 // Elección de día
 let diasSemana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
-let diaSemana = prompt("¿En qué día de la semana te gustaría comer " + comida + "? (De lunes a domingo)");
+let diaSemana = prompt("¿En qué día de la semana te gustaría comer " + comida + "? \n1. Lunes\n2. Martes\n3. Miércoles \n4. Jueves \n5. Viernes\n6. Sábado \n7. Domingo");
 
-// Validar
-while (!diasSemana.includes(diaSemana.toLowerCase())) {
-    diaSemana = prompt("Día no válido. Por favor, elige un día de la semana (de lunes a domingo)");
+// Validar elección de día
+while (true) {
+    switch (diaSemana) {
+        case "1":
+            diaSemana = "lunes";
+            break;
+        case "2":
+            diaSemana = "martes";
+            break;
+        case "3":
+            diaSemana = "miércoles";
+            break;
+        case "4":
+            diaSemana = "jueves";
+            break;
+        case "5":
+            diaSemana = "viernes";
+            break;
+        case "6":
+            diaSemana = "sábado";
+            break;
+        case "7":
+            diaSemana = "domingo";
+            break;
+        default:
+            diaSemana = prompt("Día no válido. Por favor, elige un día de la semana (de lunes a domingo)");
+            continue;
+    }
+    break;
 }
 
 // Ciclo comida
@@ -57,11 +97,11 @@ switch (comida.toLowerCase()) {
     case "pizza":
         console.log("¡Buena elección! A disfrutar de la pizza.");
         break;
-    case "ensalada":
-        console.log("Una elección saludable. Disfruta de la ensalada.");
+    case "ensalada cesar":
+        console.log("Una elección saludable. Disfruta de la ensalada César.");
         break;
     case "pastas":
-        console.log("¡Las pastas son siempre bienvenidas! A disrutar.");
+        console.log("¡Las pastas son siempre bienvenidas! A disfrutar.");
         break;
     default:
         console.log("Algo salió mal con la elección de comida.");
@@ -93,4 +133,5 @@ switch (diaSemana.toLowerCase()) {
     default:
         console.log("Algo salió mal con la elección del día.");
 }
+
 
