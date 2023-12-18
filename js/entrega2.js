@@ -17,6 +17,7 @@ const existeElementoId = (array, idReferencia) => {
       this.id = userId;
       userId++;
     }
+    
   }
   
   const agregarUsuario = (usuario) => {
